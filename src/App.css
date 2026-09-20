@@ -1,0 +1,630 @@
+/* =========================
+   TASKFLOW GLOBAL STYLES
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #111827;
+}
+
+
+/* =========================
+   COMMON
+========================= */
+
+.page {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  padding: 40px;
+}
+
+.round {
+  border-radius: 8px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.input {
+  width: 100%;
+
+  padding: 12px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  outline: none;
+}
+
+.input:focus {
+  border-color: #2563eb;
+}
+
+/* =========================
+   TASKFLOW SIDEBAR
+========================= */
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+
+  padding: 24px 16px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 8px 12px;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.sidebar-divider {
+  height: 1px;
+
+  background: #e5e7eb;
+
+  margin: 20px 8px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+/* =========================
+   SIDEBAR BUTTON
+========================= */
+
+.sidebar-btn {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #111827;
+
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition: background 0.15s ease;
+}
+
+
+/* Icon */
+
+.sidebar-icon {
+  width: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 20px;
+
+  color: #6b7280;
+}
+
+
+/* Hover */
+
+.sidebar-btn:hover {
+  background: #f5f7fb;
+}
+
+
+/* Active */
+
+.sidebar-btn.active {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.sidebar-btn.active .sidebar-icon {
+  color: #2563eb;
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.sidebar-bottom .sidebar-divider {
+  margin-bottom: 12px;
+}
+
+
+/* Logout */
+
+.sidebar-btn.logout {
+  color: #111827;
+}
+
+.sidebar-btn.logout:hover {
+  background: #f5f7fb;
+}
+
+.sidebar-btn.logout .sidebar-icon {
+  color: #6b7280;
+}
+
+.flex{
+  display: flex;
+  flex-direction: row;
+  padding-right: 20px;
+  margin-right: 20px;
+}
+
+/* =========================
+   TODO DASHBOARD
+========================= */
+
+.todo-dashboard {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+/* =========================
+   DAY TASK CARD
+========================= */
+
+.day-task-card {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  padding: 24px;
+
+  margin-bottom: 20px;
+}
+
+.day-card-header {
+  margin-bottom: 18px;
+}
+
+.day-card-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+}
+
+.day-card-header p {
+  margin: 5px 0 0;
+
+  color: #6b7280;
+  font-size: 14px;
+}
+
+
+/* =========================
+   TASK LIST
+========================= */
+
+.day-task-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-task {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 14px;
+
+  padding: 16px 0;
+
+  border-top: 1px solid #f0f1f3;
+}
+
+.todo-task:first-child {
+  border-top: none;
+}
+
+.todo-task input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+
+  margin-top: 2px;
+
+  accent-color: #2563eb;
+
+  cursor: pointer;
+}
+
+.todo-task-info {
+  flex: 1;
+}
+
+.todo-task-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.todo-task-top h3 {
+  margin: 0;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.todo-task-meta {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 6px;
+
+  color: #6b7280;
+  font-size: 13px;
+}
+
+
+/* =========================
+   PRIORITY
+========================= */
+
+.todo-priority {
+  padding: 4px 9px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.priority-high {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.priority-medium {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.priority-low {
+  background: #e5e7eb;
+  color: #4b5563;
+}
+
+
+/* =========================
+   ADD TASK CARD
+========================= */
+
+.add-task-card {
+  width: 100%;
+  min-height: 130px;
+
+  background: #ffffff;
+
+  border: 1px dashed #d1d5db;
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  cursor: pointer;
+
+  color: #6b7280;
+
+  font-family: Arial, sans-serif;
+
+  transition: border-color 0.15s ease,
+              background 0.15s ease;
+}
+
+.add-task-card:hover {
+  border-color: #2563eb;
+  background: #f8faff;
+}
+
+.add-task-icon {
+  font-size: 30px;
+  line-height: 1;
+
+  color: #2563eb;
+}
+
+.add-task-text {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   EXPANDED ADD TASK
+========================= */
+
+.add-task-expanded {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  padding: 24px;
+
+  margin-bottom: 20px;
+}
+
+.add-task-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+}
+
+.add-task-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+}
+
+.add-task-close {
+  border: none;
+  background: transparent;
+
+  font-size: 25px;
+
+  color: #6b7280;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   TASK FORM
+========================= */
+
+.todo-form-field {
+  flex: 1;
+
+  margin-bottom: 20px;
+}
+
+.todo-form-field label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.todo-form-row {
+  display: flex;
+
+  gap: 20px;
+}
+
+.todo-notes {
+  min-height: 100px;
+
+  resize: vertical;
+
+  font-family: Arial, sans-serif;
+}
+
+.todo-form-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-top: 8px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 650px) {
+
+  .todo-form-row {
+    flex-direction: column;
+
+    gap: 0;
+  }
+
+  .todo-task-top {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 7px;
+  }
+
+}
+/* ---- */
+.task-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  background: white;
+  height:150px;
+  width:550px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; */
+}
+
+.task-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-title span {
+  font-weight: 600;
+}
+
+.priority {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.task-info {
+  margin-left: 28px;
+  margin-top: 6px;
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.task-bottom {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-bottom span {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.task-bottom button {
+  border: none;
+  background: #e5e7eb;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
